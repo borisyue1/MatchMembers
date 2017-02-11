@@ -154,29 +154,29 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="4hT-Gf-peg">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="uNv-2N-Bln">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lbO-ia-GRu">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="nqh-xK-6xU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m5r-6R-9Vr">
                                 <rect key="frame" x="20" y="2" width="45" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="staticon"/>
                                 <connections>
-                                    <segue destination="TaB-eC-Iom" kind="show" identifier="toStat" id="vjn-za-SUm"/>
+                                    <segue destination="TaB-eC-Iom" kind="show" identifier="toStat" id="QF8-rk-cXd"/>
                                 </connections>
                             </button>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="teP-rw-mVK">
-                            <rect key="frame" x="113" y="6" width="189" height="33"/>
+                            <rect key="frame" x="108" y="6" width="198" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrT-Rm-Oi4">
-                                    <rect key="frame" x="0.0" y="-6" width="189" height="21"/>
+                                    <rect key="frame" x="0.0" y="-6" width="198" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvO-xB-nJJ">
-                                    <rect key="frame" x="78" y="13" width="38" height="20"/>
+                                    <rect key="frame" x="78" y="13" width="47" height="20"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -207,7 +207,6 @@
                         <outlet property="randImage" destination="yhw-0e-Bmc" id="Q6L-xY-ztA"/>
                         <outlet property="scoreLabel" destination="V2a-sF-OSY" id="lo2-VE-5iM"/>
                         <outlet property="startLabel" destination="JXK-PK-Bic" id="tJk-xJ-b7O"/>
-                        <outlet property="statButton" destination="lbO-ia-GRu" id="Ae1-xp-yfz"/>
                         <outlet property="timerLabel" destination="ZvO-xB-nJJ" id="c3U-ej-01B"/>
                         <outlet property="titleLabel" destination="VO7-0x-FW5" id="tgN-SF-jxm"/>
                         <outlet property="titlePic" destination="kun-jK-hS9" id="1bi-pa-aEb"/>
@@ -229,32 +228,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueGradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7lP-jz-iwI">
+                                <rect key="frame" x="0.0" y="-11" width="414" height="747"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d8-88-Kk8">
                                 <rect key="frame" x="157" y="223" width="101" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1Y-J4-QWk">
                                 <rect key="frame" x="59" y="347" width="296" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-Ge-EwH">
-                                <rect key="frame" x="59" y="405" width="296" height="59"/>
+                                <rect key="frame" x="59" y="388" width="296" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longest Streak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZX-HP-8ic">
+                                <rect key="frame" x="99" y="191" width="216.99999999999997" height="54.999999999999979"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Three Answers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-xF-nXk">
+                                <rect key="frame" x="73" y="294" width="269" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-kk-Uaq">
-                                <rect key="frame" x="59" y="455" width="296" height="59"/>
+                                <rect key="frame" x="59" y="426" width="296" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -271,26 +288,10 @@
             </objects>
             <point key="canvasLocation" x="-59.420289855072468" y="136.95652173913044"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="jHp-Jv-jh8">
-            <objects>
-                <viewController id="8xR-et-994" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xNw-F9-ZE1"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dlr-97-PNo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tc1-dh-fU5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pnr-F3-UaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Silhouettes" width="180" height="300"/>
+        <image name="blueGradientBackground" width="1427" height="882"/>
         <image name="staticon" width="512" height="512"/>
     </resources>
 </document>

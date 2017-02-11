@@ -52,7 +52,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         hideButtons()
         navigationController?.navigationBar.barTintColor = UIColor.lightGray
-        self.statButton.tintColor = UIColor.white
     }
     override func viewDidAppear(_ animated: Bool) {
         if firstTimeLoading == false {
