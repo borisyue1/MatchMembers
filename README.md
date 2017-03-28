@@ -3,6 +3,6 @@
 Mini-game created for Mobile Developers of Berkeley that allows users to match pictures of members with names. Players have 5 seconds each round to guess the name.
 
 ![Alt text](match_members.png "Optional Title")
-![](match_members.png =100x20)
+![Alt text](match_members.png =100x20)
 
 
