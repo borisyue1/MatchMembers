@@ -25,9 +25,9 @@ class ViewController: UIViewController {
             scoreLabel.title = "\(score)" + "/" + "\(members.count)"
         }
     }
-    var timer = 5 {
+    var timerTracker = 5 {
         didSet {
-            timerLabel.text = "\(timer)"
+            timerLabel.text = "\(timerTracker)"
         }
     }
     var oneSecDelay = Timer()
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var longestStreak = 0
     var streakTrack = 0
     var firstTimeLoading = true
+    var pausedLabel: UILabel!
     
     @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         hideButtons()
         navigationController?.navigationBar.barTintColor = UIColor.lightGray
+        self.statButton.tintColor = UIColor.white
     }
     override func viewDidAppear(_ animated: Bool) {
         if firstTimeLoading == false {
@@ -85,6 +87,9 @@ class ViewController: UIViewController {
         longestStreak = 0
         streakTrack = 0
         timerLabel.text = "0"
+        pausedLabel = UILabel(frame: CGRect(x: view.frame.width / 2 - 50, y: view.frame.width / 2 - 20, width: 100, height: 40))
+        pausedLabel.text = "Stopped"
+        view.addSubview(pausedLabel)
         
     }
     func hideButtons() {
@@ -103,13 +108,16 @@ class ViewController: UIViewController {
         buttonThree.layer.cornerRadius = 6
         buttonFour.layer.cornerRadius = 6
         randImage.isHidden = false
+        if let label = pausedLabel {
+            label.removeFromSuperview()
+        }
     }
 
     func countDown() {
-        timer -= 1;
-        if timer == 0 {
+        timerTracker -= 1;
+        if timerTracker == 0 {
             fiveSecTimer.invalidate()
-            timer = 5
+            timerTracker = 5
             fillButtonsAndImage()
         }
     }
@@ -149,8 +157,7 @@ class ViewController: UIViewController {
             streakTrack = 0
         }
         fiveSecTimer.invalidate()
-        timer = 5
-//        members.remove(at: correctIndex!) //same picture won't show up again
+        timerTracker = 5
         oneSecDelay.invalidate()
         oneSecDelay = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fillButtonsAndImage), userInfo: nil, repeats: false)
     }

@@ -23,26 +23,9 @@ class StatisticsViewController: UIViewController {
         super.viewDidLoad()
         var labels = [firstLabel, secondLabel, thirdLabel]
         streak.text = longestStreak
-        for i in 0..<lastThree.count {
-            labels[i]?.text = lastThree[i]
+        for (index, item) in lastThree.reversed().enumerated() {
+            labels[index]?.text = "\(index + 1). " + item
         }
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
